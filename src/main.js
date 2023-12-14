@@ -9,7 +9,7 @@ async function generateChangelog() {
     const commitRange = process.env.GITHUB_EVENT_NAME === 'push' ? process.env.GITHUB_SHA : 'HEAD^..HEAD';
 
     // // Read file content
-    // const content = await readFile(relativeResolve(flags.context), 'utf8');
+    const content = await readFile('utf8');
 
     // Generate changelog using conventional-changelog
     const changelog = execSync(
