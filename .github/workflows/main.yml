@@ -1,0 +1,22 @@
+# .github/workflows/main.yml
+
+name: Changelog Action Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Changelog Action
+      uses: ./  # This points to the root of your repository
+      with:
+        path: ./  # Specify the path to the action code
+        args: message="Hello, Changelog!"
