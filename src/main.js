@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
 const { readFile } = require('fs').promises;
-const { relativeResolve } = require('your-module');
+// const { relativeResolve } = require('your-module');
 const core = require('@actions/core');
 
 async function generateChangelog() {
@@ -8,8 +8,8 @@ async function generateChangelog() {
     // Get the commit range
     const commitRange = process.env.GITHUB_EVENT_NAME === 'push' ? process.env.GITHUB_SHA : 'HEAD^..HEAD';
 
-    // Read file content
-    const content = await readFile(relativeResolve(flags.context), 'utf8');
+    // // Read file content
+    // const content = await readFile(relativeResolve(flags.context), 'utf8');
 
     // Generate changelog using conventional-changelog
     const changelog = execSync(
