@@ -1,10 +1,12 @@
-# action.yml
 name: 'Changelog Action'
-description: 'Prints a changelog message'
+description: 'Generate and display changelog in pull request'
 inputs:
-  message:
-    description: 'The message to print'
+  pr-number:
+    description: 'Pull request number'
+    required: true
+  github-token:
+    description: 'GitHub token'
     required: true
 runs:
   using: 'node12'
-  main: 'src/main.js'
+  main: 'index.js'
