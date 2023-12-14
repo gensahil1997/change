@@ -4,13 +4,15 @@
     "description": "A custom changelog GitHub Action",
     "main": "src/main.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "generate-changelog": "node src/main.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "generate-changelog": "node src/main.js"
     },
     "author": "Sahil",
     "license": "MIT",
     "dependencies": {
-      "@actions/core": "^1.2.6"
+        "@actions/core": "^1.2.6"
+    },
+    "devDependencies": {
+        "conventional-changelog-cli": "^4.1.0"
     }
-  }
-  
+}
